@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://qoh000x1qsdl"]
+
+[ext_resource type="Script" uid="uid://fwspxkah5yu0" path="res://snake/snake.gd" id="1_gxkgb"]
+[ext_resource type="PackedScene" uid="uid://b5t3ycti6m2eu" path="res://snake/head/head.tscn" id="2_gxkgb"]
+[ext_resource type="Script" uid="uid://br3i0kkar2tpe" path="res://snake/limb/limb.gd" id="3_2x2sd"]
+
+[node name="Snake" type="Node2D"]
+script = ExtResource("1_gxkgb")
+
+[node name="Head" parent="." instance=ExtResource("2_gxkgb")]
+z_index = 1
+position = Vector2(222, 295)
+
+[node name="Body" type="Node2D" parent="." groups=["limb"]]
+position = Vector2(126, 295)
+script = ExtResource("3_2x2sd")
+
+[connection signal="collided_with" from="Head" to="." method="_on_head_collided_with"]

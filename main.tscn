@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://dw6coumsqs7y6"]
+
+[ext_resource type="Script" uid="uid://cia0bus1wqbik" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://qoh000x1qsdl" path="res://snake/snake.tscn" id="1_ig7tw"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0xm2m"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ig7tw"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_h2yge"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1bvp3"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_h2yge")
+
+[node name="WorldBoundaries" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2DTop" type="CollisionShape2D" parent="WorldBoundaries"]
+position = Vector2(1152, 0)
+rotation = 3.1415925
+shape = SubResource("WorldBoundaryShape2D_0xm2m")
+
+[node name="CollisionShape2DRight" type="CollisionShape2D" parent="WorldBoundaries"]
+position = Vector2(1152, 648)
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_ig7tw")
+
+[node name="CollisionShape2DLeft" type="CollisionShape2D" parent="WorldBoundaries"]
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_h2yge")
+
+[node name="CollisionShape2DBottom" type="CollisionShape2D" parent="WorldBoundaries"]
+position = Vector2(0, 648)
+shape = SubResource("WorldBoundaryShape2D_1bvp3")
+
+[node name="Snake" parent="." instance=ExtResource("1_ig7tw")]

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5t3ycti6m2eu"]
+
+[ext_resource type="Script" uid="uid://ce7l64xbxh5tv" path="res://snake/head/head.gd" id="1_hukeq"]
+[ext_resource type="Texture2D" uid="uid://o8gp3y8uoveo" path="res://assets/icon.svg" id="1_xe7ry"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hukeq"]
+size = Vector2(128, 128)
+
+[node name="Head" type="CharacterBody2D"]
+script = ExtResource("1_hukeq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hukeq")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture = ExtResource("1_xe7ry")

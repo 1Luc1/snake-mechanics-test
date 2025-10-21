@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3pvtra5ma4ce"]
+
+[ext_resource type="Script" uid="uid://dge6ur8ygkg0l" path="res://gem/gem.gd" id="1_whk3i"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_141ds"]
+radius = 30.0
+
+[sub_resource type="Gradient" id="Gradient_141ds"]
+offsets = PackedFloat32Array(0.28, 0.5466667, 0.8066667)
+colors = PackedColorArray(0.36448002, 0.43112636, 0.5981867, 0.15686275, 0.3704394, 0.43191072, 0.58548486, 1, 0.27899998, 0.3824999, 0.9, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_whk3i"]
+gradient = SubResource("Gradient_141ds")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.162)
+
+[node name="Gem" type="Area2D"]
+script = ExtResource("1_whk3i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_141ds")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_whk3i")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

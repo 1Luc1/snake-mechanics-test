@@ -1,0 +1,11 @@
+extends Node
+
+enum DIRECTION {LEFT, RIGHT, UP, DOWN, NONE = -1}
+
+const DIR2MAP = {
+	CONST.DIRECTION.LEFT: Vector2(-1, 0),
+	CONST.DIRECTION.RIGHT: Vector2(1, 0),
+	CONST.DIRECTION.UP: Vector2(0, -1),
+	CONST.DIRECTION.DOWN: Vector2(0, 1),
+	CONST.DIRECTION.NONE: Vector2(0, 0),
+}

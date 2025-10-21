@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://00tux20hi4oa"]
+
+[ext_resource type="Script" uid="uid://br3i0kkar2tpe" path="res://snake/limb/limb.gd" id="1_73ijc"]
+[ext_resource type="Texture2D" uid="uid://o8gp3y8uoveo" path="res://assets/icon.svg" id="2_qxhd5"]
+
+[node name="Limb" type="Node2D" groups=["limb"]]
+script = ExtResource("1_73ijc")
+
+[node name="Icon" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_qxhd5")
