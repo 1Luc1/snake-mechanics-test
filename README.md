@@ -6,3 +6,6 @@ The following changes of the base mechanics are made:
 - Snake moves along the world boundaries
 - use [CharacterBody2D](https://docs.godotengine.org/en/stable/classes/class_characterbody2d.html) for Snake head
 - movement logic for body limbs is moved within the limbs itself
+
+
+https://github.com/user-attachments/assets/2fb446d7-91bb-464c-86d6-3f0f2ce07ae4
